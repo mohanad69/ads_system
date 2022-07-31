@@ -4,7 +4,6 @@ namespace App\Http\Controllers\APi\Auth;
 use App\Http\Controllers\API\BaseController as BaseController;
 use App\Http\Requests\Api\Auth\LoginRequest;
 use App\Http\Resources\Api\UserResource;
-use Spatie\Permission\Models\Role;
 
 class LoginController extends BaseController
 {
