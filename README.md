@@ -1,5 +1,5 @@
 # Ads System Task Read Me 
-- project made with laravel 9, sanctum, spatie permission, cache and redis
+- project made with laravel 9, sanctum, spatie permission, cache using "file"
 
 - clone the project through: git clone https://github.com/mohanad69/ads_system.git
 - composer install
