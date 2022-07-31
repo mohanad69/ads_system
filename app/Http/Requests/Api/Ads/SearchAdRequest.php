@@ -25,7 +25,7 @@ class SearchAdRequest extends FormRequest
     public function rules()
     {
         return [
-            'agent'           => ['required', Rule::in(['mobile', 'desktop', 'both'])],
+            // 'agent'           => ['required', Rule::in(['mobile', 'desktop', 'both'])],
             'space_id'            => 'required|exists:spaces,id',
             'start_date'      => 'required|date|date_format:"Y-m-d"|before_or_equal:end_date',
             'end_date'      => 'required|date|date_format:"Y-m-d"|after_or_equal:start_date',
