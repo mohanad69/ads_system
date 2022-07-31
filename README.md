@@ -15,6 +15,8 @@
 - all apis will be found in this link: https://documenter.getpostman.com/view/2912241/UzdxxQy6
 
 - about views counting we will do the following: 
-  - adding views column in DB with default 0.
-    - adding an api to increment views. ex: frontend will make onClick event and when fire this event, he will call increment api.
-      - we can limit ad clicks by using "throttle" and in this case we will create new table "ad_views"
+```
+  1- adding views column in DB with default 0.
+  2- adding an api to increment views. ex: frontend will make onClick event and when fire this event, he will call increment api.
+  3- we can limit ad clicks by using "throttle" and in this case we will create new table "ad_views"
+```
