@@ -4,15 +4,15 @@ use Jenssegers\Agent\Agent;
 
     function detectDevice()
     {
-        $user_agent = $_SERVER["HTTP_USER_AGENT"];
+        // $user_agent = $_SERVER["HTTP_USER_AGENT"];
 
-        if(preg_match("/(android|webos|avantgo|iphone|ipod|ipad|bolt|boost|cricket|docomo|fone|hiptop|opera mini|mini|kitkat|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i",$user_agent ))
-        {
-            return 'mobile';
-        }
-        else{
+        // if(preg_match("/(android|webos|avantgo|iphone|ipod|ipad|bolt|boost|cricket|docomo|fone|hiptop|opera mini|mini|kitkat|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i",$user_agent ))
+        // {
+        //     return 'mobile';
+        // }
+        // else{
             return 'desktop';
-        }
+        // }
     }
 
     function deviceDetection(){

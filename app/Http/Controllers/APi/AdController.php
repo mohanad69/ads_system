@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\Ads\SearchAdRequest;
 use App\Http\Requests\Api\Ads\StoreAdRequest;
+use App\Http\Requests\Api\Ads\UpdateAdRequest;
 use App\Http\Resources\Api\Ads\AdsResource;
 use App\Interfaces\AdRepositoryInterface;
+use App\Models\Ad;
 
 class AdController extends Controller
 {
@@ -42,6 +44,17 @@ class AdController extends Controller
     {
         $ad = $this->adRepository->storeAd($request->all());
         return AdsResource::make($ad);
+    }
+    public function update(UpdateAdRequest $request, Ad $ad)
+    {
+        $ad = $this->adRepository->updateAd($request->all(), $ad);
+        return AdsResource::make($ad);
+    }
+
+    public function destroy(Ad $ad)
+    {
+        $ad = $this->adRepository->destroyAd($ad);
+        return response(['message' => 'ad is deleted successfully']);
     }
 
     public function searchAds(SearchAdRequest $request)

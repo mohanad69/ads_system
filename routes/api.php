@@ -25,7 +25,7 @@ use App\Http\Controllers\Api\{
 Route::post('/login', [LoginController::class, 'login']);
 
 Route::middleware(['auth:sanctum'])->group( function () {
-    Route::resource('ads', AdController::class)->except(['create', 'edit', 'update', 'destroy']);
+    Route::resource('ads', AdController::class)->except(['create', 'edit']);
     Route::get('search_ads', [AdController::class, 'searchAds']);
     Route::get('spaces', [SpaceController::class, 'index']);
 });
